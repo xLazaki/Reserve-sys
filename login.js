@@ -1,0 +1,26 @@
+function setCookie(cname,cvalue,exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
+function checklog() {
+    var username = document.getElementsByClassName("input_username")[0].value;
+    var password = document.getElementsByClassName("input_password")[0].value;
+    axios({
+        method: 'post', 
+        url: 'https://api.pattanachai.xyz:3000/login',
+        data: {username:username,password:password},
+      }).then((response)=>{
+            if (response.data.success == true) {
+                location.replace('admin.html');
+                setCookie(username,response.data.token,1);
+                setCookie('user',username,1);
+            } else {
+                alert("Wrong username or password");
+                document.cookie = "username=John Doe";
+            }
+      }).catch((err)=>{
+            console.log(err.toString());
+      })
+    }
