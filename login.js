@@ -18,7 +18,6 @@ function checklog() {
                 setCookie('user',username,1);
             } else {
                 alert("Wrong username or password");
-                document.cookie = "username=John Doe";
             }
       }).catch((err)=>{
             console.log(err.toString());
