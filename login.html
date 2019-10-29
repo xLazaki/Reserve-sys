@@ -16,21 +16,23 @@
 </head>
 
 <body>
-    <div class='top'>
-        <a href="#" class="button">HOME</a>
-        <a href="#" class="button">Resv</a>
-        <a href="#" class="button">about</a>
-        <a id='sign_in' href="#" class="button">sign-in</a>
+    <div class='flex-container'>
+		<div id='home' class='bar'><img src='logo.png'></div>
+		<div id='reserve' class='bar'><button id="reserve_button" onclick="window.location.href='user_timeslot.html'">Reserve</button></div>
+		<div id='about' class='bar'>About</div>
+		<div id='my_booking' class='bar'>My Booking</div>	
     </div>
-    <div class='row'>
-        <div class='container_right'>
-            <div class='row2'>
-                <div class='twe'>Reservation System</div>
-            </div>
-            <div class="Text_login">
-                <input class='input_username fa' type='text' placeholder=" &#xF2BD Your username"><br>
-                <input class='input_password fa' type='password' placeholder=" &#xF023 Password"><br>
-                <button id="submitbutton" class='submit' onclick="checklog()">Log-in</button>
+    <div class='twe'>
+        <p>Reservation System</p>
+    </div>
+    <div class='container'>
+        <div class="left">asdasd</div>
+        <div class="right">
+            <div class='box'>
+                <h1 id='head'>Member login</h1>
+                <input class='input_username fa' type='text' placeholder="Username">
+                <input class='input_password fa' type='password' placeholder="Password">
+                <button class='submit' onclick="checklog()">Log-in</button>
             </div>
         </div>
     </div>
