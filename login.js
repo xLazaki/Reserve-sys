@@ -13,9 +13,15 @@ function checklog() {
         data: {username:username,password:password},
       }).then((response)=>{
             if (response.data.success == true) {
+              if(response.data.username == "admin@mail.com") {
                 location.replace('admin.html');
                 setCookie(username,response.data.token,1);
                 setCookie('user',username,1);
+              } else {
+                location.replace('user_timeslot.html');
+                setCookie(username,response.data.token,1);
+                setCookie('user',username,1);
+              }
             } else {
                 alert("Wrong username or password");
             }
