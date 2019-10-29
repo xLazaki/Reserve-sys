@@ -23,8 +23,24 @@ var timeslots = {
 	19:"17.30-18.00"
 }
 
-var room = {
+var Room = {
 	'testRoom' : 0
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
 }
 
 function show(my_data) {
@@ -47,7 +63,7 @@ function show(my_data) {
 		n.appendChild(tr_node)
 		search = document.getElementsByClassName('status');
 		target = search[search.length-1].children[2];
-    	target.innerHTML = "<button onclick='cancel(".concat(room[list[1]], ',', list[2],  ',', search.length-1, ")' type=\"button\" class='btn btn-warning'>Cancel</button>");
+    	target.innerHTML = "<button onclick='cancel(".concat(Room[list[1]], ',', list[2],  ',', search.length-1, ")' type=\"button\" class='btn btn-warning'>Cancel</button>");
 	}
 }
 
@@ -75,16 +91,16 @@ function findIndex(arr, target) {
 function generateObj(cancel_data) {
 	var data = []
 	var data_room
-	for (data of cancel_data) {
-		for (var key in room) {
-			if (room[key] == data[0]) {
+	for (item of cancel_data) {
+		for (var key in Room) {
+			if (Room[key] == item[0]) {
 				data_room = key
 			}
 		}
 		data.push({
 			room: data_room,
-			date: 'TestDate',
-			slot: data[1]
+			date: 'testDate',
+			slot: item[1]
 		})
 	}
 	return data
@@ -96,15 +112,15 @@ function submit() {
 	} else {
 		axios({
 	        method: 'patch', 
-	        url: 'https://api.pattanachai.xyz:3000/free',
+	        url: 'https://api.pattanachai.xyz/free',
 	        headers: {
-	            Authorization: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuYW1lMUBtYWlsLmNvbSIsImlhdCI6MTU3MjI2NTAxMTkyN30.RjispnYI-3G8R69POdS8mHmBAMQv7RUKp4K3cjoI-30"
+	            Authorization: getCookie(getCookie('user'))
 	        },
 	        data: generateObj(cancel_data),
 	        }).then((response)=>{
 			    if(response.data.success){
 			        //free successfully
-					alert('freed!')
+					alert('Cancel Room Success!')
 			    }
 			    else{
 			    	//can't free
@@ -137,9 +153,9 @@ function newSort(data) {
 
 axios({
         method: 'get', 
-        url: 'https://api.pattanachai.xyz:3000/userReservations',
+        url: 'https://api.pattanachai.xyz/userReservations',
         headers: {
-            Authorization: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuYW1lMUBtYWlsLmNvbSIsImlhdCI6MTU3MjI2NTAxMTkyN30.RjispnYI-3G8R69POdS8mHmBAMQv7RUKp4K3cjoI-30"
+            Authorization: getCookie(getCookie('user'))
         },
         }).then((response)=>{
 		    //response.data <- Array ของการจองทั้งหมด

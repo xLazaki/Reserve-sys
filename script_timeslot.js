@@ -1,5 +1,20 @@
-// var result_timeslots = [true,true,false,false,true,false,false,false,false,true , false,false,false,true,true,false,false,false,false,false];
-reserve_data = []
+var reserve_data = []
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
 
 function findTarget(index, round) {
     n = document.getElementsByClassName('status');
@@ -38,8 +53,8 @@ function booked() {
 
 function generateObject(data) {
     result = []
-    for (var item in data) {
-        result.push({room: 'TestRoom', date:'TestDate', slot:(item[0]-1+(item[1]*10))})
+    for (var item of data) {
+        result.push({room: 'testRoom', date:'testDate', slot:(item[0]-1+(item[1]*10))})
     }
     return result
 }
@@ -55,10 +70,11 @@ function submit() {
                 method: 'post', 
                 url: 'https://api.pattanachai.xyz/reserve',
                 headers: {
-                    Authorization: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuYW1lMUBtYWlsLmNvbSIsImlhdCI6MTU3MjI2NTAxMTkyN30.RjispnYI-3G8R69POdS8mHmBAMQv7RUKp4K3cjoI-30"
+                    Authorization: getCookie(getCookie('user'))
                 },
                 data: generateObject(reserve_data),
             }).then((response)=>{
+                console.log(response.data)
                 if(response.data.success){
                     //reserve successfully
                     alert('Reserved!');
