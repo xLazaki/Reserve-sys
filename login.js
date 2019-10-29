@@ -4,6 +4,9 @@ function setCookie(cname,cvalue,exdays) {
     var expires = "expires=" + d.toGMTString();
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
   }
+function ping(){
+    alert("Please login")
+}
 function checklog() {
     var username = document.getElementsByClassName("input_username")[0].value;
     var password = document.getElementsByClassName("input_password")[0].value;

@@ -1,11 +1,8 @@
 table {
     display: flexbox;
-    border: 1px solid #D3D3D3;
-    border-collapse: collapse;
-    padding: 10px;
+    border: 1px solid #1b1b1b;
     text-align: center;
-    background-color:white;
-    border-collapse: collapse;
+    background-color:black;
     width: 40%;
     margin: 20px;
 }
@@ -31,21 +28,22 @@ table {
     background-color: black;
 }
 
-.button {
-    background-color: goldenrod;
-    border: none;
-    color: white;
-    padding: 10px 20px;
+.tb {
+    background-color: #f90;
+    color: black;
     text-align: center;
-    text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+    font-size: 13px;
     cursor: pointer;
+    padding-bottom: auto;
+    border:none;
+    border-radius: 2px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 80px;
 }
 
 #sign_in {
-    background-color: red;
     border: none;
     color: white;
     padding: 10px 20px;
@@ -57,13 +55,15 @@ table {
     cursor: pointer;
 }
 th {
-    background-color: black;
+    background-color:black;
     color: white;
     font-size: 20px;
 }
 td {
     border: black 1px;
     border-style: solid;
+    background-color: #1b1b1b;
+    color: white;
 }
 .container {
     display: flex;
@@ -71,19 +71,19 @@ td {
     padding: none;
     padding: 0px;
     height: 22px;
-    border-color: aqua;
+    border-color:#1b1b1b;
 }
 .flex-container {
 	display: flex;
 	width: 100%;
 	height: 100%;
-	background-color: white;
+	background-color: #1b1b1b;
 	cursor: pointer;
 	font-family: "Ubuntu", Arial;
 	align-items: center;
 }
 .flex-container > div {
-	background-color: white;
+	background-color: #1b1b1b;
 	margin: 10px;
 	padding: 10px 20px;
 	font-size: 22px;
@@ -93,11 +93,11 @@ td {
 
 #reserve_button {
 	border: none;
-	background-color: white;
+	background-color: #1b1b1b;
 	color: black;
 	font-weight: bold;
 	font-family: "Ubuntu", Arial;
-	padding: 10px 20px;
+    padding: 10px 20px;
 }
 
 #my_booking {
@@ -108,9 +108,71 @@ td {
 #reserve {
 	/*border-bottom: 5px solid white;*/
 	padding: 10px 20px;
-	margin: 0px;
+    margin: 0px;
 }
 
 #home:hover, #reserve_button:hover, #about:hover, #reserve:hover{
-    background-color: rgb(191, 190, 190) 
+    background-color: #1b1b1b;
+}
+.flex-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color:#1b1b1b;
+    cursor: pointer;
+    font-family: "Ubuntu", Arial;
+    align-items: center;
+}
+
+.flex-container > div {
+    background-color:#1b1b1b;
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+}
+#reserve{
+    font-size: 22px;
+}
+
+#reserve_button {
+    border: none;
+    background-color: #1b1b1b;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    font-family: "Ubuntu", Arial;
+    padding: 10px 20px;
+}
+
+#my_booking {
+    padding: 0px;
+    margin: 0px;
+}
+
+#reserve {
+    border-bottom: 5px solid #f90;
+    padding: 10px 20px;
+    margin: 0px;
+}
+
+#home:hover, #my_booking:hover, #about:hover{
+    border-bottom: 2px solid #f90; 
+}
+img {
+    height: 50px;
+    width: auto;
+}
+body{
+    background-color: black;
+}
+.submit {
+    background-color: #f90;
+    color: black;
+    margin-left: 70vw;
+    font-size: 25px;
+    align-items: center;
+    border:white 1px solid;
+    border-radius: 1px;
 }

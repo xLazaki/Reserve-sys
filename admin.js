@@ -82,10 +82,16 @@ function reserve_choose(i) {
     if (timeslots[i].reserved == false) {
         if (document.getElementsByClassName("Reserve")[i].innerText == 'Reserve') {
             document.getElementsByClassName("Reserve")[i].innerHTML = 'Chosen'
+            document.getElementsByClassName("Reserve")[i].style.fontWeight = 'bold';
+            document.getElementsByClassName('Reserve')[i].style.color="#f90"
+            document.getElementsByClassName('Reserve')[i].style.backgroundColor="black"
             a[i] = 'chosen'
         } else {
             if (document.getElementsByClassName("Reserve")[i].innerText == 'Chosen') {
                 document.getElementsByClassName("Reserve")[i].innerHTML = 'Reserve'
+                document.getElementsByClassName("Reserve")[i].style.fontWeight = 'bold';
+                document.getElementsByClassName('Reserve')[i].style.color="black"
+                document.getElementsByClassName('Reserve')[i].style.backgroundColor="#f90"
                 a[i] = false
             }
         }

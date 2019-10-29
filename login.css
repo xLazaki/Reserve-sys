@@ -111,7 +111,7 @@ body {
 #reserve:hover, #my_booking:hover, #about:hover{
     border-bottom: 2px solid #f90; 
 }
-.alert{
+    .alert{
     display:flex;
     color:white;
 }
