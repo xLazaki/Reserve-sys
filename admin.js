@@ -1,7 +1,3 @@
-function refresh(){
-    axios({
-        method: 'post',
-        url: 'https://api.pattanachai.xyz:3000/timeslots',
 function refresh() {
     axios({
         method: 'post',
@@ -17,9 +13,6 @@ function refresh() {
         console.log(err.toString());EAD
     })  
 }
-    })
-}
-
 function getCookie(cname) {
     var name = cname + "=";
     var decodedCookie = decodeURIComponent(document.cookie);
@@ -67,7 +60,6 @@ function checktocancel(x, k) {
             })
         }
     }
-}
 }
 function status(x, i) {
     if (timeslots[i].reserved == true) {
