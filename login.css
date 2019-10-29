@@ -1,0 +1,133 @@
+    body {
+        background-image: url("booking-background-8.jpg");
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .row {
+        box-sizing: border-box;
+        display: flex;
+        height: 100vh;
+    }
+    
+    .row2 {
+        box-sizing: border-box;
+        display: flex;
+    }
+    
+    #sign_up {
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding-top: 10px;
+        border-left: solid white 3px;
+    }
+    
+    .twe {
+        flex: 1800px;
+        font-family: 'Anton', sans-serif;
+        font-size: 50px;
+        background-color: black;
+        color: white;
+        text-align: center;
+    }
+    
+    .container_right {
+        flex: 100%;
+        text-align: center;
+    }
+    
+    .Text_login {
+        border-style: solid;
+        border-color: rgba(241, 97, 0, 0.1);
+        border-width: 2px 2px 2px 2px;
+        border-radius: 20px;
+        margin-right: 35%;
+        margin-left: 35%;
+        margin-top: 5rem;
+        margin-bottom: 3rem;
+        padding-bottom: 30px;
+        padding-top: 50px;
+        background-color: rgba(125, 90, 22, 0.5);
+    }
+    
+    .fa {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border: 0px;
+        border-radius: 20px;
+        padding: 15px;
+        cursor: pointer;
+        text-align: center;
+        justify-content: center;
+        width: 80%;
+    }
+    
+    .submit {
+        background-color: black;
+        border: none;
+        border-radius: 20px;
+        padding: 10px;
+        margin-top: 10px;
+        color: white;
+        width: 75%;
+        transition-duration: 0.5s;
+        font-family: 'Anton', sans-serif;
+        font-size: 25px;
+    }
+    
+    .submit:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+    
+    #mySidenav a {
+        position: absolute;
+        left: -80px;
+        transition: 0.3s;
+        padding: 15px;
+        width: 100px;
+        text-decoration: none;
+        font-size: 20px;
+        color: white;
+        border-radius: 0 5px 5px 0;
+    }
+    
+    a {
+        background-color: black;
+        color: white;
+        margin: 0px 0px 0px 0px;
+    }
+    
+    .top {
+        display: flex;
+        box-sizing: border-box;
+        padding-right: 100px;
+        background-color: black;
+    }
+    
+    .button {
+        background-color: goldenrod;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+    
+    #sign_in {
+        background-color: red;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
