@@ -9,33 +9,17 @@ function checklog() {
     var password = document.getElementsByClassName("input_password")[0].value;
     axios({
         method: 'post', 
-<<<<<<< HEAD
-        url: 'https://api.pattanachai.xyz:3000/login',
-        data: {username:username,password:password},
-      }).then((response)=>{
-            if (response.data.success == true) {
-                location.replace('admin.html');
-                setCookie(username,response.data.token,1);
-                setCookie('user',username,1);
-=======
         url: 'https://api.pattanachai.xyz/login',
         data: {username:username,password:password},
       }).then((response)=>{
             if (response.data.success == true) {
-              if(response.data.username == "admin@mail.com") {
                 location.replace('admin.html');
                 setCookie(username,response.data.token,1);
                 setCookie('user',username,1);
-              } else {
-                location.replace('user_timeslot.html');
-                setCookie(username,response.data.token,1);
-                setCookie('user',username,1);
-              }
->>>>>>> master
             } else {
                 alert("Wrong username or password");
             }
       }).catch((err)=>{
             console.log(err.toString());
       })
-    }
+}
