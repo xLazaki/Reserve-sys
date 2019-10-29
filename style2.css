@@ -1,0 +1,40 @@
+#reserve {
+	border-bottom: 0px;
+	padding: 0px;
+	margin: 0px;
+}
+
+#my_booking, #my_booking:hover {
+	border-bottom: 5px solid white;
+	padding: 10px 20px;
+}
+
+#home:hover, #reserve:hover, #about:hover{
+	border-bottom: 2px solid white; 
+}
+
+#reserve_button {
+	border: none;
+	padding: 10px 20px;
+	background-color: rgb(80,80,80);
+	color: white;
+	font-weight: bold;
+	font-family: "Ubuntu", Arial;
+}
+
+#submit_button {
+	text-align: right;
+	padding-right: 25px
+}
+
+tr:first-child {
+	background-color: black;
+}
+
+nav {
+	margin: 0px 20px;
+}
+
+nav > input {
+	margin: 0px 20px;
+}
