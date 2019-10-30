@@ -1,4 +1,4 @@
-function submit() {
+function sign_up_submit() {
     var username = document.getElementById('1').value;
     var password = document.getElementById('2').value;
     var password_comfirm = document.getElementById('3').value;
