@@ -1,4 +1,10 @@
-var reserve_data = []
+var reserve_data = [];
+var today = new Date();
+var todayD = today.getDate();
+var todayM = today.getMonth();
+var todayY = today.getFullYear();
+var dateString = todayY + "-" + (todayM + 1) + "-" + todayD;
+document.getElementById('DateId').setAttribute('value', dateString)
 
 function getCookie(cname) {
     var name = cname + "=";
@@ -53,8 +59,13 @@ function booked() {
 
 function generateObject(data) {
     result = []
+    var dateFromDefault = document.getElementById('DateId').value
+    var roomFromDefault = document.getElementById('room_dropdown').value
+    if (dateFromDefault == "") {
+        dateFromDefault = "testDate"
+    }
     for (var item of data) {
-        result.push({room: 'testRoom', date:'testDate', slot:(item[0]-1+(item[1]*10))})
+        result.push({room: roomFromDefault, date: dateFromDefault, slot:(item[0]-1+(item[1]*10))})
     }
     return result
 }
@@ -83,9 +94,10 @@ function submit() {
                         n = document.getElementsByClassName('status')[index[1]].children[index[0]];
                         n.innerHTML = "<td><button onclick='booked()' type=\"button\" class='btn btn-warning'>Booked</button></td>";
                     }
+                    reserve_data = []
                 }
                 else{
-                    //cant reserve
+                    //can't reserve
                     alert("Can't reserve");
                     // response.data.fail <-- array ของห้องทั้งหมดที่จองไม่ได้
                 }
@@ -99,28 +111,75 @@ function submit() {
     }
 }
 
-axios({
-    method:  'post',
-    url:  'https://api.pattanachai.xyz/timeslots',
-    data: {room:  'testRoom', date:'testDate'},
-}).then((response)=>{
-    timeslot = response.data
-    for(var i=1 ; i<21 ; i++){
-        var round = Math.floor(i/11)
-        if (i >= 11) {
-            var index = (i+1)%11
-        } else {
-            var index = i%11
-        }
-        if (timeslot[i-1].reserved == true) { //full
-            target = findTarget(index, round);
-            target.innerHTML = "<td><button onclick='full()' type=\"button\" class='btn btn-danger'>Busy</button></td>";
-        }
-        else { //available
-            target = findTarget(index, round);
-            target.innerHTML = "<td><button onclick='reserveRoom(".concat(index, ",", round, ")' type=\"button\" class='btn btn-secondary'>Empty</button></td>");
-        }
+function getRoomAndDate() {
+    data = []
+    var dateFromDefault = document.getElementById('DateId').value
+    var roomFromDefault = document.getElementById('room_dropdown').value
+    if (dateFromDefault == "") {
+        dateFromDefault = "testDate"
     }
-}).catch((err)=>{
-    console.log(err.toString());
-})
+    data.push({
+        room: roomFromDefault,
+        date: dateFromDefault
+    })
+    return data[0]
+}
+
+function createRoomDrop() {
+    axios({
+        method: 'get', 
+        url: 'https://api.pattanachai.xyz/rooms',
+        headers: {
+            Authorization: getCookie(getCookie('user'))
+        },
+        data: {name: 'testDate'},
+        }).then((response)=>{
+            var room_dropdown = document.getElementById('room_dropdown')
+            for (var item of response.data){
+                var node = document.createElement('option')
+                var text = document.createTextNode(item['name'])
+                node.appendChild(text)
+                room_dropdown.appendChild(node) 
+            }
+            getHead()
+        })
+}
+
+function getHead() {
+    var roomChosen = document.getElementById('room_dropdown').value
+    document.getElementById('roomHead').innerHTML = roomChosen
+}
+
+function refresh() {
+    getHead()
+    axios({
+        method:  'post',
+        url:  'https://api.pattanachai.xyz/timeslots',
+        data: getRoomAndDate(),
+    }).then((response)=>{
+        timeslot = response.data
+        // console.log(response.data)
+        for(var i=1 ; i<21 ; i++){
+            var round = Math.floor(i/11)
+            if (i >= 11) {
+                var index = (i+1)%11
+            } else {
+                var index = i%11
+            }
+            if (timeslot[i-1].reserved == true) { //full
+                target = findTarget(index, round);
+                target.innerHTML = "<td><button onclick='full()' type=\"button\" class='btn btn-danger'>Busy</button></td>";
+            }
+            else { //available
+                target = findTarget(index, round);
+                target.innerHTML = "<td><button onclick='reserveRoom(".concat(index, ",", round, ")' type=\"button\" class='btn btn-secondary'>Empty</button></td>");
+            }
+        }
+    }).catch((err)=>{
+        console.log(err.toString());
+    })
+}
+
+//----------------------------------
+createRoomDrop()
+refresh()

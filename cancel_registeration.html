@@ -17,15 +17,16 @@
 		<div id='my_booking' class='bar'>My Booking</div>	
 	</div><br>
 	<nav>
-		<select>
+		<!-- <select>
 			<option value='room_a'>testRoom</option>
 			<option value='room_b'>Room B</option>
-		</select>
-		<input type="date">
-		<button>Search</button>
+		</select> -->
+		<strong>Date</strong>
+		<input type="date" id='DateId'>
+		<button onclick='refresh()' type="button" class='btn btn-secondary'>Search</button>
 	</nav><hr>
 	<table id='information'>
-		<tr style='color:white;'>
+		<tr style='color:rgb(255, 255, 255);'>
 			<th width='40%'>Room</th>
 			<th width='40%'>Time</th>
 			<th width='20%'>Status</th>
