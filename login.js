@@ -14,7 +14,7 @@ function checklog() {
         data: { username: username, password: password },
     }).then((response) => {
         if (response.data.success == true) {
-            if (getCookie('user') == 'admin@mail.com') {
+            if (username == 'admin@mail.com') {
                 location.replace('admin.html');
                 setCookie(username, response.data.token, 1);
                 setCookie('user', username, 1);

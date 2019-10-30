@@ -1,85 +1,88 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Reserve Room</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+    <title>Reserve Room</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
 </head>
+
 <body>
-	<div class='flex-container'>
-		<div id='home' class='bar'>Home</div>
-		<div id='reserve' class='bar'>Reserve</div>
-		<div id='about' class='bar'>About</div>
-		<div id='my_booking' class='bar'><button id='reserve_button' onclick='window.location.href="cancel_registeration.html";'>My Booking</button></div>	
-	</div><br>
-	<h1 style='font-size: 40px'>Room A</h1><br>
-	<h5 style='text-align: right'>
-		Date
-		<input type="date" name="">
-		<button type="button" class='btn btn-secondary'>Enter</button>
-	</h5><br><br>
-	<table>
-		<tr>
-			<th>Time</th>
-			<th>8.00-8.30</th>
-			<th>8.30-9.00</th>
-			<th>9.00-9.30</th>
-			<th>9.30-10.00</th>
-			<th>10.00-10.30</th>
-			<th>10.30-11.00</th>
-			<th>11.00-11.30</th>
-			<th>11.30-12.00</th>
-			<th>12.00-12.30</th>
-			<th>12.30-13.00</th>
-		</tr>
-		<tr class='status'>
-			<td>Status</td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-	</table><br>
-	<table>
-		<tr>
-			<th>Time</th>
-			<th>13.00-13.30</th>
-			<th>13.30-14.00</th>
-			<th>14.00-14.30</th>
-			<th>14.30-15.00</th>
-			<th>15.00-15.30</th>
-			<th>15.30-16.00</th>
-			<th>16.00-16.30</th>
-			<th>16.30-17.00</th>
-			<th>17.00-17.30</th>
-			<th>17.30-18.00</th>
-		</tr>
-		<tr class='status'>
-			<td>Status</td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-	</table><br>
-	<p class='done'>
-		<button type="button" onclick='submit()' class="btn btn-success">Done</button>
-	</p>
-	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-	<script type="text/javascript" src='script_login.js'></script>
-	<script type="text/javascript" src='script_timeslot.js'></script>
+    <div class='flex-container'>
+        <div id='home' class='bar'>Home</div>
+        <div id='reserve' class='bar'>Reserve</div>
+        <div id='about' class='bar'>About</div>
+        <div id='my_booking' class='bar'><button id='reserve_button' onclick='window.location.href="cancel_registeration.html";'>My Booking</button></div>
+    </div><br>
+    <h1 style='font-size: 40px'>Room A</h1><br>
+    <h5 style='text-align: right'>
+        Date
+        <input id='ll' type="date" name="">
+        <button type="button" class='btn btn-secondary'>Enter</button>
+    </h5><br><br>
+    <table>
+        <tr>
+            <th>Time</th>
+            <th>8.00-8.30</th>
+            <th>8.30-9.00</th>
+            <th>9.00-9.30</th>
+            <th>9.30-10.00</th>
+            <th>10.00-10.30</th>
+            <th>10.30-11.00</th>
+            <th>11.00-11.30</th>
+            <th>11.30-12.00</th>
+            <th>12.00-12.30</th>
+            <th>12.30-13.00</th>
+        </tr>
+        <tr class='status'>
+            <td>Status</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table><br>
+    <table>
+        <tr>
+            <th>Time</th>
+            <th>13.00-13.30</th>
+            <th>13.30-14.00</th>
+            <th>14.00-14.30</th>
+            <th>14.30-15.00</th>
+            <th>15.00-15.30</th>
+            <th>15.30-16.00</th>
+            <th>16.00-16.30</th>
+            <th>16.30-17.00</th>
+            <th>17.00-17.30</th>
+            <th>17.30-18.00</th>
+        </tr>
+        <tr class='status'>
+            <td>Status</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table><br>
+    <p class='done'>
+        <button type="button" onclick='submit()' class="btn btn-success">Done</button>
+    </p>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src='script_login.js'></script>
+    <script type="text/javascript" src='script_timeslot.js'></script>
 </body>
+
 </html>
