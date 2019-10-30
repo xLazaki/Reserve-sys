@@ -21,11 +21,14 @@
         </div>
 
     </div><br>
-    <h1 style='font-size: 40px'>Room A</h1><br>
+    <h1 style='font-size: 40px' id='roomHead'><strong>testRoom</strong></h1><br>
     <h5 style='text-align: right'>
+        Room
+        <select id='room_dropdown'>
+        </select><br><br>
         Date
-        <input id='ll' type="date" name="">
-        <button type="button" class='btn btn-secondary'>Enter</button>
+        <input id='DateId' type="date" name="">
+        <button type="button" onclick='refresh()' class='btn btn-secondary'>Enter</button>
     </h5><br><br>
     <table>
         <tr>
@@ -87,7 +90,6 @@
         <button type="button" onclick='submit()' class="btn btn-success">Done</button>
     </p>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script type="text/javascript" src='script_login.js'></script>
     <script type="text/javascript" src='script_timeslot.js'></script>
 </body>
 
