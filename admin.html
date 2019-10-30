@@ -18,14 +18,13 @@
         <div id='reserve' class='bar'><button id="reserve_button">Reserve (Admin)</button></div>
         <div id='about' class='bar'>About</div>
     </div>
-    <div>
-        <input id='date' type="date">
-        <select id='room'name="cars">
+    <div class='input-data'>
+        <input class='Ez' id='date' type="date" onchange="reload()"> 
+        <select class='Ez' id='Room'name="cars" onchange="reload()">
             <option value="Room1">Room1</option>
             <option value="Room2">Room2</option>
             <option value="Room3">Room3</option>
         </select>
-        <button id='refresh' onclick=reload()>Search</button>
     </div>
     <table id='sd'>
         <tr>

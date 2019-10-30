@@ -43,7 +43,7 @@ function checktocancel(x, k) {
                 headers: {
                     Authorization: getCookie(getCookie('user'))
                 },
-                data: [{ room: document.getElementById('Room'), date: y, slot: k }],
+                data: [{ room: document.getElementById('Room').value, date: y, slot: k }],
             }).then((response) => {
                 if (response.data.success) {
                     alert('Success')
@@ -52,7 +52,7 @@ function checktocancel(x, k) {
                         //can't free
                         // response.data.fail <-- array ของการจองที่ยกเลิกไม่ได้ทั้งหมด
                 }
-                refresh(y);
+                refresh(y,document.getElementById('Room').value);
             }).catch((err) => {
                 if (err.response.status == 401) {
                     //not logged in (didn't attach token in the header)
@@ -112,7 +112,8 @@ function submit() {
         var datasend = [];
         for (var i = 0; i < 20; i++) {
             if (a[i] == 'chosen') {
-                datasend.push({ reserver: getCookie('user'), room: document.getElementById("Room"), date: y, slot: i.toString(10) })
+                datasend.push({ reserver: getCookie('user'), room: document.getElementById("Room").value, date: y, slot: i.toString(10) })
+                console.log(datasend)
             }
         }
         if (datasend.length == 0) {
@@ -128,9 +129,12 @@ function submit() {
             }).then((response) => {
                 if (response.data.success == true) {
                     alert('reserve successfully');
-                    refresh(y, document.getElementById("Room"));
+                    console.log(response.data)
+                    refresh(y, document.getElementById("Room").value);
                 } else {
                     alert("can't reserve");
+                    console.log(response.data)
+                    refresh(y, document.getElementById("Room").value);
 
                 }
             }).catch((err) => {
@@ -150,12 +154,17 @@ function getdate() {
     var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
     var yyyy = today.getFullYear();
     today = yyyy + '-' + mm + '-' + dd;
-    a = today
-    return a
+    b = today
+    return b
 }
-
 function reload() {
-    refresh(document.getElementById('date').value,document.getElementById("room").value);
+    if (compareDate(document.getElementById('date').value)){
+    refresh(document.getElementById('date').value,document.getElementById("Room").value);
+    }else{
+        alert("It was a day in the past")
+        document.getElementById("date").value = getdate();
+        refresh(getdate(),document.getElementById("Room").value);
+    }
 }
 var a = ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
 var id_status = ["index0_can", "index1_can", "index2_can", "index3_can", "index4_can", "index5_can", "index6_can", "index7_can", "index8_can", "index9_can",
@@ -163,3 +172,19 @@ var id_status = ["index0_can", "index1_can", "index2_can", "index3_can", "index4
 ];
 refresh(getdate(), 'Room1');
 document.getElementById("date").value = getdate();
+function compareDate(date1) {
+    var U=getdate()
+    data = []
+    data.push(date1.split('-'))
+    data.push(U.split('-'))
+    for (var date in data) {
+        date[0] == parseInt(date[0], 10)
+        date[1] == parseInt(date[1], 10)
+        date[2] == parseInt(date[2], 10)
+    }
+    if (data[0] >= data[1]) {
+        return true
+    } else {
+        return false
+    }
+}
