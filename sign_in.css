@@ -46,10 +46,16 @@
     border-bottom: 5px solid #f90;
     padding: 10px 20px;
     margin: 0px;
+    margin-right: 10px;
 }
 
-#reserve:hover,#my_booking:hover,#about:hover,#reserve:hover {
+#reserve:hover,#my_booking:hover,#about:hover,#reserve:hover,#login:hover {
     border-bottom: 2px solid #f90;
+}
+#login{
+    padding: 10px 20px;
+    margin: 3px;
+    color: white;
 }
 
 .alert {
@@ -87,11 +93,6 @@ body {
     height: auto;
     margin-left:35vw;
 }
-
-.box>h1 {
-    border-bottom: white 5px solid;
-}
-
 .fa {
     padding: 10px;
     width: 250px;

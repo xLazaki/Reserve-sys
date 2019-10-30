@@ -155,7 +155,7 @@ function getdate() {
 }
 
 function reload() {
-    refresh(document.getElementById('date').value);
+    refresh(document.getElementById('date').value,document.getElementById("room").value);
 }
 var a = ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
 var id_status = ["index0_can", "index1_can", "index2_can", "index3_can", "index4_can", "index5_can", "index6_can", "index7_can", "index8_can", "index9_can",

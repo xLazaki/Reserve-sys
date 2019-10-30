@@ -17,10 +17,16 @@
 
 <body>
     <div class='flex-container'>
-        <div id='home' class='bar' onclick="window.location.href='login.html'"><img src='logo.png'></div>
-        <div id='reserve' class='bar'><button id="reserve_button" onclick=ping()>Reserve</button></div>
-        <div id='about' class='bar'>About</div>
-        <div id='my_booking' class='bar'>My Booking</div>
+        <div class='aleft'>
+            <div id='home' class='bar' onclick="window.location.href='login.html'"><img src='logo.png'></div>
+            <div id='reserve' class='bar'>Reserve</div>
+            <div id='about' class='bar'>About</div>
+            <div id='my_booking' class='bar'>My Booking</div>
+        </div>
+        <div class='aright'>
+            <p id='login'>LOGIN</p>
+            <p id='sign_up' onclick="location.replace('sign_in.html');">SIGN-UP</p>
+        </div>
     </div>
     <div class='twe'>
         <p>Reservation System</p>
@@ -47,6 +53,5 @@
     </div>
     <script type="text/javascript" src="login.js"></script>
 </body>
-<footer>Footer</footer>
-
+<hr>
 </html>

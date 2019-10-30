@@ -12,21 +12,21 @@
 </head>
 <body>
     <div class='container'>
-        <form>
-            <div class='flex-container'>
-                <div class='aleft'>
-                    <div id='home' class='bar' onclick="window.location.href='login.html'"><img src='logo.png'></div>
-                    <div id='reserve' class='bar'>Reserve</div>
-                    <div id='about' class='bar'>About</div>
-                    <div id='my_booking' class='bar'>My Booking</div>
-                </div>
-                <div class='aright'>
-                    <p id='sign_up'>SIGN-UP</p>
-                </div>
-
+        <div class='flex-container'>
+            <div class='aleft'>
+                <div id='home' class='bar' onclick="window.location.href='login.html'"><img src='logo.png'></div>
+                <div id='reserve' class='bar'>Reserve</div>
+                <div id='about' class='bar'>About</div>
+                <div id='my_booking' class='bar'>My Booking</div>
             </div>
+            <div class='aright'>
+                <p id='login' onclick="location.replace('login.html');">LOGIN</p>
+                <p id='sign_up'>SIGN-UP</p>
+            </div>
+        </div>
+        <form>
             <div class="box">
-                <h1 id='head'>Member login</h1>
+                <h1 id='head'><b>SIGN-UP</b></h1>
                 <input id='4' class='fa' type="text" placeholder="Name">
                 <input id='1' class='fa'type="email" placeholder="Username">
                 <input id='2' class='fa'type="password" placeholder="Password">

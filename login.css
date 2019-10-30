@@ -1,7 +1,7 @@
 body {
     background-color: black;
     width: 100vw;
-    height: 100vw;
+    height: 50vw;
 }
 
 .container {
@@ -80,48 +80,6 @@ body {
     transform: scale(1.1);
     cursor: pointer;
 }
-
-.flex-container {
-    display: flex;
-    width: 100%;
-    background-color: #1b1b1b;
-    cursor: pointer;
-    font-family: "Ubuntu", Arial;
-    align-items: center;
-}
-.flex-container>div {
-    background-color: #1b1b1b;
-    margin: 10px;
-    padding: 10px 20px;
-    font-size: 22px;
-    font-weight: bold;
-    color: white;
-}
-
-#reserve_button {
-    border: none;
-    background-color: #1b1b1b;
-    color: white;
-    font-weight: bold;
-    font-family: "Ubuntu", Arial;
-    padding: 10px 20px;
-}
-
-#my_booking {
-    padding: 0px;
-    margin: 0px;
-}
-
-#home {
-    border-bottom: 5px solid #f90;
-    padding: 10px 20px;
-    margin: 0px;
-}
-
-#reserve:hover,#my_booking:hover,#about:hover {
-    border-bottom: 2px solid #f90;
-}
-
 .alert {
     display: flex;
     color: white;
@@ -152,4 +110,67 @@ b {
 
 p {
     border-bottom: #1b1b1b solid 4px;
+}
+.flex-container {
+    display: flex;
+    width: 100%;
+    background-color: #1b1b1b;
+    cursor: pointer;
+    font-family: "Ubuntu", Arial;
+    align-items: center;
+    width: 100vw;
+    justify-content: center;
+}
+.flex-container>div {
+    display: flex;
+    background-color: #1b1b1b;
+    margin: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+}
+.aleft{
+    width: 50vw;
+    flex-direction: row;
+}
+.aright {
+    width:50vw;
+    border: none;
+    padding: 0px;
+    justify-content: flex-end;
+}
+#reserve_button {
+    border: none;
+    background-color: #1b1b1b;
+    color: white;
+    font-weight: bold;
+    font-family: "Ubuntu", Arial;
+    margin:20px
+}
+#about{
+    margin: 20px;
+}
+#my_booking,#reserve {
+    padding: 0px;
+    margin: 20px;
+}
+#reserve:hover,#my_booking:hover,#about:hover,#sign_up:hover{
+    border-bottom: 2px solid #f90;
+}
+#login {
+    border-bottom: 5px solid #f90;
+    padding: 10px 20px;
+    margin: 0px;
+    color: white;
+}
+#home {
+    margin: 0px;
+}
+#login{
+    padding: 10px 20px;
+    margin: 5px;
+    color: white;
+}
+#sign_up{
+    margin-right: 10px;
 }
