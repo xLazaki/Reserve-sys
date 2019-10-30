@@ -14,83 +14,92 @@
 
 <body>
     <div class='flex-container'>
-		<div id='home' class='bar'  onclick="window.location.href='login.html'"><img src='logo.png'></div>
-		<div id='reserve' class='bar'><button id="reserve_button">Reserve (Admin)</button></div>
-		<div id='about' class='bar'>About</div>
+        <div id='home' class='bar' onclick="window.location.href='login.html'"><img src='logo.png'></div>
+        <div id='reserve' class='bar'><button id="reserve_button">Reserve (Admin)</button></div>
+        <div id='about' class='bar'>About</div>
+    </div>
+    <div>
+        <input id='date' type="date">
+        <select name="cars">
+            <option value="Room1">Room1</option>
+            <option value="Room2">Room2</option>
+            <option value="Room3">Room3</option>
+        </select>
+        <button id='refresh' onclick=reload()>refresh</button>
     </div>
     <table id='sd'>
-            <tr>
-                <th>Time</th>
-                <th>Status</th>
-                <th>Option</th>
-                <th>User</th>
-            </tr>
-            <tr class='v'>
-                <td >8.00-8.30</td>
-                <td ><span class="dot" id="index0_can"></span></td>
-                <td class="container"><button class='cancel tb' onclick="checktocancel('index0_can','0')"><b>Cancel</b></button>
-                    <button class='Reserve tb' onclick="reserve_choose('0')" ><b>Reserve</b></button>
-                </td>
-                <td class='user'></td>
-            </tr>
-            <tr >
-                <td >8.30-9.00</td>
-                <td ><span class="dot " id="index1_can"></span></td>
-                <td class="container"><button class='cancel tb' onclick="checktocancel('index1_can','1')"><b>Cancel</b></button>
-                    <button class='Reserve tb' onclick="reserve_choose('1')"><b>Reserve</b></button>
-                </td>
-                <td class='user'></td>
-            </tr>
-            <tr>
-                <td  >9.00-9.30</td>
-                <td ><span class="dot" id="index2_can"></span></td>
-                <td class="container"><button class='cancel tb' onclick="checktocancel('index2_can','2')"><b>Cancel</b></button>
-                    <button class='Reserve tb'onclick="reserve_choose('2')"><b>Reserve</b></button>
-                </td>
-                <td class='user'></td>
-            </tr>
-            <tr >
-                <td >9.30-10.00</td>
-                <td ><span class="dot" id="index3_can"></span></td>
-                <td class="container"><button class='cancel tb' onclick="checktocancel('index3_can','3')"><b>Cancel</b></button>
-                    <button class='Reserve tb' onclick="reserve_choose('3')"><b>Reserve</b></button>
-                </td>
-                <td class='user'></td>
-            </tr>
-            <tr>
-                <td >10.00-10.30</td>
-                <td ><span class="dot" id="index4_can"></span></td>
-                <td class="container"><button class='cancel tb' onclick="checktocancel('index4_can','4')"><b>Cancel</b></button>
-                    <button class='Reserve tb' onclick="reserve_choose('4')"><b>Reserve</b></button>
-                </td>
-                <td class='user'></td>
-            </tr>
-                <td >10.30-11.00</td>
-                <td ><span class="dot" id="index5_can"></span></td>
-                <td class="container"><button class='cancel tb' onclick="checktocancel('index5_can','5')"><b>Cancel</b></button>
-                    <button class='Reserve tb' onclick="reserve_choose('5')"><b>Reserve</b></button>
-                </td>
-                <td class='user'></td>
-            </tr>
-            <tr>
-                <td >11.00-11.30</td>
-                <td ><span class="dot" id="index6_can"></span></td>
-                <td class="container"><button class='cancel tb' onclick="checktocancel('index6_can','6')"><b>Cancel</b></button>
-                    <button class='Reserve tb'onclick="reserve_choose('6')"><b>Reserve</b></button>
-                </td>
-                <td class='user'></td>
-            </tr>
-            <tr>
-                <td >11.30-12.00</td>
-                <td ><span class="dot" id="index7_can"></span></td>
-                <td class="container"><button class='cancel tb' onclick="checktocancel('index7_can','7')"><b>Cancel</b></button>
-                    <button class='Reserve tb'onclick="reserve_choose('7')"><b>Reserve</b></button>
-                </td>
-                <td class='user'></td>
-            </tr>
+        <tr>
+            <th>Time</th>
+            <th>Status</th>
+            <th>Option</th>
+            <th>User</th>
+        </tr>
+        <tr class='v'>
+            <td>8.00-8.30</td>
+            <td><span class="dot" id="index0_can"></span></td>
+            <td class="container"><button class='cancel tb' onclick="checktocancel('index0_can','0')"><b>Cancel</b></button>
+                <button class='Reserve tb' onclick="reserve_choose('0')"><b>Reserve</b></button>
+            </td>
+            <td class='user'></td>
+        </tr>
+        <tr>
+            <td>8.30-9.00</td>
+            <td><span class="dot " id="index1_can"></span></td>
+            <td class="container"><button class='cancel tb' onclick="checktocancel('index1_can','1')"><b>Cancel</b></button>
+                <button class='Reserve tb' onclick="reserve_choose('1')"><b>Reserve</b></button>
+            </td>
+            <td class='user'></td>
+        </tr>
+        <tr>
+            <td>9.00-9.30</td>
+            <td><span class="dot" id="index2_can"></span></td>
+            <td class="container"><button class='cancel tb' onclick="checktocancel('index2_can','2')"><b>Cancel</b></button>
+                <button class='Reserve tb' onclick="reserve_choose('2')"><b>Reserve</b></button>
+            </td>
+            <td class='user'></td>
+        </tr>
+        <tr>
+            <td>9.30-10.00</td>
+            <td><span class="dot" id="index3_can"></span></td>
+            <td class="container"><button class='cancel tb' onclick="checktocancel('index3_can','3')"><b>Cancel</b></button>
+                <button class='Reserve tb' onclick="reserve_choose('3')"><b>Reserve</b></button>
+            </td>
+            <td class='user'></td>
+        </tr>
+        <tr>
+            <td>10.00-10.30</td>
+            <td><span class="dot" id="index4_can"></span></td>
+            <td class="container"><button class='cancel tb' onclick="checktocancel('index4_can','4')"><b>Cancel</b></button>
+                <button class='Reserve tb' onclick="reserve_choose('4')"><b>Reserve</b></button>
+            </td>
+            <td class='user'></td>
+        </tr>
+        <td>10.30-11.00</td>
+        <td><span class="dot" id="index5_can"></span></td>
+        <td class="container"><button class='cancel tb' onclick="checktocancel('index5_can','5')"><b>Cancel</b></button>
+            <button class='Reserve tb' onclick="reserve_choose('5')"><b>Reserve</b></button>
+        </td>
+        <td class='user'></td>
+        </tr>
+        <tr>
+            <td>11.00-11.30</td>
+            <td><span class="dot" id="index6_can"></span></td>
+            <td class="container"><button class='cancel tb' onclick="checktocancel('index6_can','6')"><b>Cancel</b></button>
+                <button class='Reserve tb' onclick="reserve_choose('6')"><b>Reserve</b></button>
+            </td>
+            <td class='user'></td>
+        </tr>
+        <tr>
+            <td>11.30-12.00</td>
+            <td><span class="dot" id="index7_can"></span></td>
+            <td class="container"><button class='cancel tb' onclick="checktocancel('index7_can','7')"><b>Cancel</b></button>
+                <button class='Reserve tb' onclick="reserve_choose('7')"><b>Reserve</b></button>
+            </td>
+            <td class='user'></td>
+        </tr>
     </table>
-    <table id='ds'> 
-            <tr>
+    <table id='ds'>
+        <tr>
             <th>Time</th>
             <th>Status</th>
             <th>Option</th>
@@ -192,12 +201,12 @@
             </td>
             <td class='user'></td>
         </tr>
-        </table>
-        <div class="submit1">
-            <button class='submit' onclick="submit()"><b>Submit</b></button>
-        </div>
+    </table>
+    <div class="submit1">
+        <button class='submit' onclick="submit()"><b>Submit</b></button>
+    </div>
 
-        <script type="text/javascript" src="admin.js"></script>
+    <script type="text/javascript" src="admin.js"></script>
 </body>
 
 </html>

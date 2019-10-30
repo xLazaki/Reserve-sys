@@ -1,53 +1,57 @@
 html {
-    background-color: black ;
-}
-.flex-container {
-	display: flex;
-	width: 100%;
-	height: 100%;
-	background-color:black;
-	cursor: pointer;
-	font-family: "Ubuntu", Arial;
-	align-items: center;
+    background-color: black;
 }
 
-.flex-container > div {
-	background-color:black;
-	margin: 10px;
-	padding: 10px 20px;
-	font-size: 22px;
-	font-weight: bold;
+.flex-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    cursor: pointer;
+    font-family: "Ubuntu", Arial;
+    align-items: center;
+}
+
+.flex-container>div {
+    background-color: black;
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 22px;
+    font-weight: bold;
     color: white;
 }
 
 #reserve_button {
-	border: none;
-	background-color: black;
-	color: white;
-	font-weight: bold;
-	font-family: "Ubuntu", Arial;
-	padding: 10px 20px;
+    border: none;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-family: "Ubuntu", Arial;
+    padding: 10px 20px;
 }
 
 #my_booking {
-	padding: 0px;
-	margin: 0px;
+    padding: 0px;
+    margin: 0px;
 }
 
 #reserve {
-	border-bottom: 5px solid #f90;
-	padding: 10px 20px;
-	margin: 0px;
+    border-bottom: 5px solid #f90;
+    padding: 10px 20px;
+    margin: 0px;
 }
 
-#home:hover, #my_booking:hover, #about:hover{
-    border-bottom: 2px solid #f90; 
+#home:hover,
+#my_booking:hover,
+#about:hover {
+    border-bottom: 2px solid #f90;
 }
-.br{
+
+.br {
     width: 50px;
 }
-.alert{
-    display:flex;
-    color:white;
-}
 
+.alert {
+    display: flex;
+    color: white;
+}
