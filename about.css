@@ -1,0 +1,114 @@
+.flex-container {
+    display: flex;
+    width: 100%;
+    background-color: #1b1b1b;
+    cursor: pointer;
+    font-family: "Ubuntu", Arial;
+    align-items: center;
+    width: 100vw;
+    justify-content: center;
+}
+.flex-container>div {
+    display: flex;
+    background-color: #1b1b1b;
+    margin: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+}
+.aleft{
+    width: 50vw;
+    flex-direction: row;
+}
+.aright {
+    width:50vw;
+    border: none;
+    padding: 0px;
+    justify-content: flex-end;
+}
+#reserve_button {
+    border: none;
+    background-color: #1b1b1b;
+    color: white;
+    font-weight: bold;
+    font-family: "Ubuntu", Arial;
+    margin:20px
+}
+#about{
+    margin: 20px;
+}
+#my_booking,#reserve {
+    padding: 0px;
+    margin: 20px;
+}
+#reserve:hover,#my_booking:hover,#about:hover,#sign_up:hover{
+    border-bottom: 2px solid #f90;
+}
+#login {
+    border-bottom: 5px solid #f90;
+    padding: 10px 20px;
+    margin: 0px;
+    color: white;
+}
+#home {
+    margin: 0px;
+}
+#login{
+    padding: 10px 20px;
+    margin: 5px;
+    color: white;
+}
+#sign_up{
+    margin-right: 10px;
+}
+img {
+    height: 50px;
+    width: auto;
+}
+body{
+    background-color: black;
+}
+.box1 {
+    display: flex;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+}
+#head {
+    color: white;
+    background-color: black;
+    width: 100vw;
+    text-align: center;
+    padding: 20px 20px;
+    font-size: 50px;
+}
+#infomation{
+    display: flex;
+    background-color: #1b1b1b;
+    width: 100vw;
+    height: 30vw;
+    justify-content: center;
+    align-items: center;
+}
+.box2 {
+    background-color:black;
+    width: 40vw;
+    height: 25vw;
+    flex-direction: column;
+    list-style: none;
+    justify-content: center;
+    padding: 20px;
+}
+.item {
+    background: tomato;
+    padding: 5px;
+    width: auto;
+    height: auto;
+    margin-top: 20px;
+    line-height: 5vw;
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+  }
