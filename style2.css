@@ -1,22 +1,105 @@
+.flex-container {
+    display: flex;
+    width: 100%;
+    background-color: #1b1b1b;
+    cursor: pointer;
+    font-family: "Ubuntu", Arial;
+    align-items: center;
+	justify-content: left;
+	text-align: center;
+}
+
+.flex-container2 {
+    display: flex;
+    width: 50%;
+    justify-content: flex-end;
+}
+
+.flex-container>div {
+    display: flex;
+    background-color: none;
+    margin: 10px 15px;
+    font-size: 22px;
+    font-weight: bold;
+	color: white;
+}
+
+.flex-container2>div {
+    padding: 10px 20px
+}
+
+img {
+    height: 50px;
+    width: auto;
+}
+
+body {
+	width: 100%;
+	background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+h1, h5 {
+    font-family: "Ubuntu", Arial;
+    color: white;
+}
+
+th {
+	border: 1px solid rgb(255, 255, 255);
+}
+
+tr:nth-child(odd) {
+  background-color: black;
+}
+
+tr:nth-child(even) {
+	background-color: #1b1b1b;
+}
+
+h1, h5 {
+	margin: 0px 25px;
+}
+
+p {
+	text-align: right;
+	margin: 0px 30px;
+}
+
+table {
+    text-align:center; 
+    margin-left:auto; 
+    margin-right:auto; 
+    width:85%;
+    font-family: "Ubuntu", Arial;
+    color: white;
+ }
+
 #reserve {
 	border-bottom: 0px;
 	padding: 0px;
-	margin: 0px;
+	margin: 0pxs 15px;
 }
 
 #my_booking, #my_booking:hover {
-	border-bottom: 5px solid white;
+	border-bottom: 5px solid #f90;
 	padding: 10px 20px;
 }
 
-#home:hover, #reserve:hover, #about:hover{
-	border-bottom: 2px solid white; 
+#home:hover, #reserve:hover, #about:hover, #sign-out:hover {
+	border-bottom: 2px solid #f90; 
 }
 
 #reserve_button {
 	border: none;
 	padding: 10px 20px;
-	background-color: rgb(80,80,80);
+	background-color: #1b1b1b;
 	color: white;
 	font-weight: bold;
 	font-family: "Ubuntu", Arial;
@@ -37,4 +120,9 @@ nav {
 
 nav > input {
 	margin: 0px 20px;
+}
+
+#about.bar, #home.bar {
+	padding: 10px 20px;
+	margin: 0px 15px
 }
