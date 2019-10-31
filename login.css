@@ -81,11 +81,11 @@ body {
 
 .flex-container > div {
     background-color:#1b1b1b;
-    margin: 10px;
-    padding: 10px 20px;
+    padding: 0px;
     font-size: 22px;
     font-weight: bold;
     color: white;
+    margin: 0px 15px;
 }
 
 #reserve_button {
@@ -97,9 +97,9 @@ body {
     padding: 10px 20px;
 }
 
-#my_booking {
-    padding: 0px;
-    margin: 0px;
+#my_booking, #about{
+    padding: 10px 20px;
+    margin: 0px 10px;
 }
 
 #home {
