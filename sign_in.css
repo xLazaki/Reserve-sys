@@ -6,6 +6,7 @@
     font-family: "Ubuntu", Arial;
     align-items: center;
     width: 100vw;
+    height: 100px;
     justify-content: center;
 }
 .flex-container>div {

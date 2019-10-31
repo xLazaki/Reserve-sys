@@ -119,12 +119,14 @@ p {
     font-family: "Ubuntu", Arial;
     align-items: center;
     width: 100vw;
+    height: 100px;
     justify-content: center;
 }
 .flex-container>div {
     display: flex;
     background-color: #1b1b1b;
     margin: 10px;
+    margin-bottom: 0px;
     font-size: 22px;
     font-weight: bold;
     color: white;
@@ -138,6 +140,7 @@ p {
     border: none;
     padding: 0px;
     justify-content: flex-end;
+    margin-bottom: 0px;
 }
 #reserve_button {
     border: none;
@@ -160,17 +163,39 @@ p {
 #login {
     border-bottom: 5px solid #f90;
     padding: 10px 20px;
-    margin: 0px;
+
     color: white;
 }
 #home {
     margin: 0px;
 }
 #login{
+    border-bottom: 5px solid #f90;
     padding: 10px 20px;
-    margin: 5px;
+    margin-right:10px;
+    margin-top: 20px;
     color: white;
+    padding-bottom: 0px;
 }
 #sign_up{
+    padding: 10px 20px;
     margin-right: 10px;
+    color: white;
+}
+#onlogin1{
+    border-bottom: 5px solid #f90;
+    padding: 10px 20px;
+    margin-right: 10px;
+    color: white;
+}
+#onlogin2{
+    padding: 10px 20px;
+    margin-right: 10px;
+    color: white;
+}
+#onlogin2:hover{
+    border-bottom: 2px solid #f90;
+    padding: 10px 20px;
+    margin-right: 10px;
+    color: white;
 }

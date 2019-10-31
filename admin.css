@@ -87,97 +87,86 @@ td {
 .flex-container {
     display: flex;
     width: 100%;
-    height: 100%;
     background-color: #1b1b1b;
     cursor: pointer;
     font-family: "Ubuntu", Arial;
     align-items: center;
+    width: 100vw;
+    justify-content: center;
 }
-
 .flex-container>div {
-    background-color: #1b1b1b;
-    margin: 10px;
-    padding: 10px 20px;
-    font-size: 22px;
-    font-weight: bold;
-    color: black;
-}
-
-#reserve_button {
-    border: none;
-    background-color: #1b1b1b;
-    color: black;
-    font-weight: bold;
-    font-family: "Ubuntu", Arial;
-    padding: 10px 20px;
-}
-
-#my_booking {
-    padding: 0px;
-    margin: 0px;
-}
-
-#reserve {
-    /*border-bottom: 5px solid white;*/
-    padding: 10px 20px;
-    margin: 0px;
-}
-
-#home:hover,
-#reserve_button:hover,
-#about:hover,
-#reserve:hover {
-    background-color: #1b1b1b;
-}
-
-.flex-container {
     display: flex;
-    width: 100%;
-    height: 100%;
-    background-color: #1b1b1b;
-    cursor: pointer;
-    font-family: "Ubuntu", Arial;
-    align-items: center;
-}
-
-.flex-container>div {
     background-color: #1b1b1b;
     margin: 10px;
-    padding: 10px 20px;
     font-size: 22px;
     font-weight: bold;
     color: white;
 }
-
-#reserve {
-    font-size: 22px;
+.aleft{
+    width: 50vw;
+    flex-direction: row;
 }
-
+.aright {
+    width:50vw;
+    border: none;
+    padding: 0px;
+    justify-content: flex-end;
+}
 #reserve_button {
     border: none;
     background-color: #1b1b1b;
     color: white;
     font-weight: bold;
-    font-size: 22px;
     font-family: "Ubuntu", Arial;
-    padding: 10px 20px;
+    margin:20px
 }
-
-#my_booking {
+#about{
+    margin: 20px;
+}
+#my_booking,#reserve {
     padding: 0px;
-    margin: 0px;
+    margin: 20px;
 }
-
-#reserve {
+#reserve:hover,#my_booking:hover,#about:hover,#sign_up:hover{
+    border-bottom: 2px solid #f90;
+}
+#login {
     border-bottom: 5px solid #f90;
     padding: 10px 20px;
+    color: white;
+}
+#home {
     margin: 0px;
 }
-
-#home:hover,
-#my_booking:hover,
-#about:hover {
+#login{
+    border-bottom: 5px solid #f90;
+    padding: 10px 20px;
+    margin-right:10px;
+    margin-top: 20px;
+    color: white;
+    padding-bottom: 0px;
+}
+#sign_up{
+    padding: 10px 20px;
+    margin-right: 10px;
+    color: white;
+}
+#onlogin1{
+    border-bottom: 5px solid #f90;
+    padding: 10px 20px;
+    margin-right: 10px;
+    color: white;
+}
+#onlogin2{
+    padding: 10px 20px;
+    margin-right: 10px;
+    color: white;
+}
+#onlogin2:hover{
     border-bottom: 2px solid #f90;
+    padding: 10px 20px;
+    margin-right: 10px;
+    color: white;
 }
 
 img {

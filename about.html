@@ -12,12 +12,14 @@
         <div class='aleft'>
             <div id='home' class='bar' onclick="window.location.href='login.html'"><img src='logo.png'></div>
             <div id='reserve' class='bar'>Reserve</div>
-            <div id='about' class='bar'>About</div>
+            <div id='about' class='bar' onclick="location.replace('about.html')">About</div>
             <div id='my_booking' class='bar'>My Booking</div>
         </div>
         <div class='aright'>
-            <p id='login'>LOGIN</p>
+            <p id='login'onclick="location.replace('login.html')" >LOGIN</p>
+            <div id='onlogin1'></div>
             <p id='sign_up' onclick="location.replace('sign_in.html')">SIGN-UP</p>
+            <div id='onlogin2' onclick="logout()">SIGN OUT</div>
         </div>
     </div>
     <div class='box1'>
@@ -31,5 +33,6 @@
         </div>
         <div id='footer'></div>
     </div>
+    <script type="text/javascript" src="about.js"></script>
 </body>
 </html>

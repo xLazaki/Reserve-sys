@@ -41,14 +41,8 @@
     padding: 0px;
     margin: 20px;
 }
-#reserve:hover,#my_booking:hover,#about:hover,#sign_up:hover{
+#reserve:hover,#my_booking:hover,#about:hover,#sign_up:hover,#login:hover{
     border-bottom: 2px solid #f90;
-}
-#login {
-    border-bottom: 5px solid #f90;
-    padding: 10px 20px;
-    margin: 0px;
-    color: white;
 }
 #home {
     margin: 0px;
@@ -58,7 +52,7 @@
     margin: 5px;
     color: white;
 }
-#sign_up{
+#Dog{
     margin-right: 10px;
 }
 img {
@@ -112,3 +106,35 @@ body{
     font-size: 2em;
     text-align: center;
   }
+#onlogin1{
+    border-bottom: 5px solid #f90;
+    padding: 10px 20px;
+    margin-right: 10px;
+    color: white;
+}
+#onlogin2{
+    padding: 10px 20px;
+    margin-right: 10px;
+    color: white;
+}
+#onlogin2:hover{
+    border-bottom: 2px solid #f90;
+    padding: 10px 20px;
+    margin-right: 10px;
+    color: white;
+}
+#sign_up{
+    padding: 10px 20px;
+    margin-right: 10px;
+    color: white;
+}
+#login{
+    padding: 0px 20px;
+    margin-right:10px;
+    margin-top: 30px;
+    color: white;
+    padding-bottom: 0px;
+}
+#about{
+    border-bottom: 5px solid #f90;
+}

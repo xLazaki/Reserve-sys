@@ -14,9 +14,15 @@
 
 <body>
     <div class='flex-container'>
-        <div id='home' class='bar' onclick="window.location.href='login.html'"><img src='logo.png'></div>
-        <div id='reserve' class='bar'><button id="reserve_button">Reserve (Admin)</button></div>
-        <div id='about' class='bar'>About</div>
+        <div class='aleft'>
+            <div id='home' class='bar' onclick="window.location.href='login.html'"><img src='logo.png'></div>
+        </div>
+        <div class='aright'>
+            <p id='login'>LOGIN</p>
+            <div id='onlogin1'></div>
+            <p id='sign_up' onclick="location.replace('sign_in.html')">SIGN-UP</p>
+            <div id='onlogin2' onclick="logout()">SIGN OUT</div>
+        </div>
     </div>
     <div class='input-data'>
         <input class='Ez' id='date' type="date" onchange="reload()"> 

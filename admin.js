@@ -188,3 +188,27 @@ function compareDate(date1) {
         return false
     }
 }
+if (getCookie('user')!=''){
+    var K=getCookie('user');
+    document.getElementById("sign_up").style.display='none';
+    document.getElementById('login').style.display='none';
+    document.getElementById('onlogin1').innerHTML=K
+    
+}else{
+    document.getElementById('onlogin1').style.display='none';
+    document.getElementById('onlogin2').style.display='none';
+}
+function logout(){
+    deleteAllCookies()
+    location.replace('login.html');
+}
+function deleteAllCookies() {
+    var cookies = document.cookie.split(";");
+
+    for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i];
+        var eqPos = cookie.indexOf("=");
+        var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+        document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+    }
+}
