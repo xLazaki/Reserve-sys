@@ -197,5 +197,7 @@ function refresh() {
 }
 
 //----------------------------------
+var cook = getCookie('user');
+document.getElementById('ABC').innerHTML=cook
 createRoomDrop()
 refresh()

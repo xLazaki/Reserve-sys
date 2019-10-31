@@ -63,6 +63,9 @@ function getCookie(cname) {
     return "";
 }
 
+var cook = getCookie('user');
+document.getElementById('ABC').innerHTML=cook
+
 function deleteAllCookies() {
     var cookies = document.cookie.split(";");
 
