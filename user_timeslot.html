@@ -8,27 +8,24 @@
     <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body style='background-color: black;'>
     <div class='flex-container'>
-        <div>
-        <div id='home' class='bar'>Home</div>
+        <div id='home' class='bar' onclick="window.location.href='login.html'"><img src='logo.png'></div>
         <div id='reserve' class='bar'>Reserve</div>
-        <div id='about' class='bar'>About</div>
+        <div id='about' class='bar'><button id='reserve_button' onclick='window.location.href="about.html";'>About</button></div>
         <div id='my_booking' class='bar'><button id='reserve_button' onclick='window.location.href="cancel_registeration.html";'>My Booking</button></div>
+        <div class='flex-container2'>
+            <div id='sign-out'><button id='reserve_button' onclick='sign_out()'>Sign-out</button></div>
         </div>
-        <div>
-            <p>sign-up</p>
-        </div>
-
     </div><br>
     <h1 style='font-size: 40px' id='roomHead'><strong>testRoom</strong></h1><br>
     <h5 style='text-align: right'>
         Room
-        <select id='room_dropdown'>
+        <select onchange='refresh()' id='room_dropdown'>
         </select><br><br>
         Date
-        <input id='DateId' type="date" name="">
-        <button type="button" onclick='refresh()' class='btn btn-secondary'>Enter</button>
+        <input id='DateId' type="date" name="" onchange='refresh()'>
+        <!-- <button type="button" onclick='refresh()' class='btn btn-secondary'>Enter</button> -->
     </h5><br><br>
     <table>
         <tr>

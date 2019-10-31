@@ -3,37 +3,34 @@
 <head>
 	<title>
 		<title>My Boooking</title>
-		<link rel="stylesheet" type="text/css" href="style.css">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="style2.css">
 		<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
 	</title>
 </head>
-<body>
+<body style='background-color: black; color:white;'>
 	<div class='flex-container'>
-		<div id='home' class='bar'>Home</div>
+		<div id='home' class='bar' onclick="window.location.href='login.html'"><img src='logo.png'></div>
 		<div id='reserve' class='bar'><button id="reserve_button" onclick="window.location.href='user_timeslot.html'">Reserve</button></div>
-		<div id='about' class='bar'>About</div>
-		<div id='my_booking' class='bar'>My Booking</div>	
+		<div id='about' class='bar'><button id="reserve_button" onclick="window.location.href='about.html'">About</button></div>
+		<div id='my_booking' class='bar'>My Booking</div>
+		<div class='flex-container2'>
+            <div id='sign-out'><button id='reserve_button' onclick='sign_out()'>Sign-out</button></div>
+		</div>	
 	</div><br>
 	<nav>
-		<!-- <select>
-			<option value='room_a'>testRoom</option>
-			<option value='room_b'>Room B</option>
-		</select> -->
 		<strong>Date</strong>
-		<input type="date" id='DateId'>
-		<button onclick='refresh()' type="button" class='btn btn-secondary'>Search</button>
+		<input type="date" id='DateId' onchange='refresh()'>
 	</nav><hr>
 	<table id='information'>
-		<tr style='color:rgb(255, 255, 255);'>
+		<tr style='background-color:#f90; color:black;'>
 			<th width='40%'>Room</th>
 			<th width='40%'>Time</th>
 			<th width='20%'>Status</th>
 		</tr>
 	</table><br>
 	<p id="submit_button">
-		<button onclick='submit()' type="button" class='btn btn-success'>Submit</button>
+		<button onclick='submit()' type="button" class='btn btn-success'>Confirm</button>
 	</p>
 	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 	<script type="text/javascript" src='cencel.js'></script>
