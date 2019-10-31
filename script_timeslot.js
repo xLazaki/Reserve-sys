@@ -127,18 +127,35 @@ function submit() {
     }
 }
 
-function getRoomAndDate() {
+function compareDate(date1) {
     data = []
+    data.push(date1.split('-'))
+    data.push(dateString.split('-'))
+    for (var date in data) {
+        date[0] == parseInt(date[0], 10)
+        date[1] == parseInt(date[1], 10)
+        date[2] == parseInt(date[2], 10)
+    }
+    if (data[0] >= data[1]) {
+        return true
+    } else {
+        return false
+    }
+}
+
+function getRoomAndDate() {
+    data99 = []
     var dateFromDefault = document.getElementById('DateId').value
     var roomFromDefault = document.getElementById('room_dropdown').value
-    if (dateFromDefault == "") {
+    if (dateFromDefault == "" || !(compareDate(dateFromDefault))) {
+        document.getElementById('DateId').value = ""
         dateFromDefault = "testDate"
     }
-    data.push({
+    data99.push({
         room: roomFromDefault,
         date: dateFromDefault
     })
-    return data[0]
+    return data99[0]
 }
 
 function createRoomDrop() {
@@ -174,7 +191,6 @@ function refresh() {
         data: getRoomAndDate(),
     }).then((response)=>{
         timeslot = response.data
-        // console.log(response.data)
         for(var i=1 ; i<21 ; i++){
             var round = Math.floor(i/11)
             if (i >= 11) {
