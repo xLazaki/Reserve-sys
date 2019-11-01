@@ -9,6 +9,7 @@
     height: 100px;
     justify-content: center;
 }
+
 .flex-container>div {
     display: flex;
     background-color: #1b1b1b;
@@ -17,28 +18,34 @@
     font-weight: bold;
     color: white;
 }
-.aleft{
+
+.aleft {
     width: 50vw;
     flex-direction: row;
 }
+
 .aright {
-    width:50vw;
+    width: 50vw;
     border: none;
     padding: 0px;
     justify-content: flex-end;
 }
+
 #reserve_button {
     border: none;
     background-color: #1b1b1b;
     color: white;
     font-weight: bold;
     font-family: "Ubuntu", Arial;
-    margin:20px
+    margin: 20px
 }
-#about{
+
+#about {
     margin: 20px;
 }
-#my_booking,#reserve {
+
+#my_booking,
+#reserve {
     padding: 0px;
     margin: 20px;
 }
@@ -50,10 +57,15 @@
     margin-right: 10px;
 }
 
-#reserve:hover,#my_booking:hover,#about:hover,#reserve:hover,#login:hover {
+#reserve:hover,
+#my_booking:hover,
+#about:hover,
+#reserve:hover,
+#login:hover {
     border-bottom: 2px solid #f90;
 }
-#login{
+
+#login {
     padding: 10px 20px;
     margin: 3px;
     color: white;
@@ -74,12 +86,15 @@ img {
     height: 50px;
     width: auto;
 }
+
 p {
     margin-right: 20px;
 }
+
 body {
     background-color: black;
 }
+
 .box {
     background-color: black;
     display: flex;
@@ -92,8 +107,9 @@ body {
     margin-top: 50px;
     width: 30vw;
     height: auto;
-    margin-left:35vw;
+    margin-left: 35vw;
 }
+
 .fa {
     padding: 10px;
     width: 250px;
@@ -112,6 +128,7 @@ body {
 .input_username {
     margin-top: 20px;
 }
+
 .submit {
     background-color: #f90;
     border: none;
@@ -124,7 +141,21 @@ body {
     font-family: 'Anton', sans-serif;
     font-size: 15px;
 }
+
 .box>h1 {
     border-bottom: white 5px solid;
     color: white;
+}
+
+.footer {
+    bottom: 0;
+    position: fixed;
+    width: 100vw;
+    height: 40px;
+    background-color: #1b1b1b;
+}
+
+.footer>div {
+    text-align: right;
+    margin-right: 50px;
 }

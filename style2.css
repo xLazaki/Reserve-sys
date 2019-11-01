@@ -5,8 +5,8 @@
     cursor: pointer;
     font-family: "Ubuntu", Arial;
     align-items: center;
-	justify-content: left;
-	text-align: center;
+    justify-content: left;
+    text-align: center;
 }
 
 .flex-container2 {
@@ -21,7 +21,7 @@
     margin: 10px 15px;
     font-size: 22px;
     font-weight: bold;
-	color: white;
+    color: white;
 }
 
 .flex-container2>div {
@@ -34,95 +34,116 @@ img {
 }
 
 body {
-	width: 100%;
-	background-size: cover;
+    width: 100%;
+    background-size: cover;
     background-position: center;
     color: white;
 }
 
-td, th {
-  border: 1px solid #dddddd;
-  text-align: center;
-  padding: 8px;
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
 }
 
-h1, h5 {
+h1,
+h5 {
     font-family: "Ubuntu", Arial;
     color: white;
 }
 
 th {
-	border: 1px solid rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
 }
 
 tr:nth-child(odd) {
-  background-color: black;
+    background-color: black;
 }
 
 tr:nth-child(even) {
-	background-color: #1b1b1b;
+    background-color: #1b1b1b;
 }
 
-h1, h5 {
-	margin: 0px 25px;
+h1,
+h5 {
+    margin: 0px 25px;
 }
 
 p {
-	text-align: right;
-	margin: 0px 30px;
+    text-align: right;
+    margin: 0px 30px;
 }
 
 table {
-    text-align:center; 
-    margin-left:auto; 
-    margin-right:auto; 
-    width:85%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
     font-family: "Ubuntu", Arial;
     color: white;
- }
+}
 
 #reserve {
-	border-bottom: 0px;
-	padding: 0px;
-	margin: 0pxs 15px;
+    border-bottom: 0px;
+    padding: 0px;
+    margin: 0pxs 15px;
 }
 
-#my_booking, #my_booking:hover {
-	border-bottom: 5px solid #f90;
-	padding: 10px 20px;
+#my_booking,
+#my_booking:hover {
+    border-bottom: 5px solid #f90;
+    padding: 10px 20px;
 }
 
-#home:hover, #reserve:hover, #about:hover, #sign-out:hover {
-	border-bottom: 2px solid #f90; 
+#home:hover,
+#reserve:hover,
+#about:hover,
+#sign-out:hover {
+    border-bottom: 2px solid #f90;
 }
 
 #reserve_button {
-	border: none;
-	padding: 10px 20px;
-	background-color: #1b1b1b;
-	color: white;
-	font-weight: bold;
-	font-family: "Ubuntu", Arial;
+    border: none;
+    padding: 10px 20px;
+    background-color: #1b1b1b;
+    color: white;
+    font-weight: bold;
+    font-family: "Ubuntu", Arial;
 }
 
 #submit_button {
-	text-align: right;
-	padding-right: 25px
+    text-align: right;
+    padding-right: 25px
 }
 
 tr:first-child {
-	background-color: black;
+    background-color: black;
 }
 
 nav {
-	margin: 0px 20px;
+    margin: 0px 20px;
 }
 
-nav > input {
-	margin: 0px 20px;
+nav>input {
+    margin: 0px 20px;
 }
 
-#about.bar, #home.bar {
-	padding: 10px 20px;
-	margin: 0px 15px
+#about.bar,
+#home.bar {
+    padding: 10px 20px;
+    margin: 0px 15px
+}
+
+.footer {
+    bottom: 0;
+    position: fixed;
+    width: 100vw;
+    height: 40px;
+    background-color: #1b1b1b;
+}
+
+.footer>div {
+    text-align: right;
+    margin-right: 50px;
 }

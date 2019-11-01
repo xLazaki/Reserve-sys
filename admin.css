@@ -94,6 +94,7 @@ td {
     width: 100vw;
     justify-content: center;
 }
+
 .flex-container>div {
     display: flex;
     background-color: #1b1b1b;
@@ -102,67 +103,84 @@ td {
     font-weight: bold;
     color: white;
 }
-.aleft{
+
+.aleft {
     width: 50vw;
     flex-direction: row;
 }
+
 .aright {
-    width:50vw;
+    width: 50vw;
     border: none;
     padding: 0px;
     justify-content: flex-end;
 }
+
 #reserve_button {
     border: none;
     background-color: #1b1b1b;
     color: white;
     font-weight: bold;
     font-family: "Ubuntu", Arial;
-    margin:20px
+    margin: 20px
 }
-#about{
+
+#about {
     margin: 20px;
 }
-#my_booking,#reserve {
+
+#my_booking,
+#reserve {
     padding: 0px;
     margin: 20px;
 }
-#reserve:hover,#my_booking:hover,#about:hover,#sign_up:hover{
+
+#reserve:hover,
+#my_booking:hover,
+#about:hover,
+#sign_up:hover {
     border-bottom: 2px solid #f90;
 }
+
 #login {
     border-bottom: 5px solid #f90;
     padding: 10px 20px;
     color: white;
 }
+
 #home {
     margin: 0px;
 }
-#login{
+
+#login {
     border-bottom: 5px solid #f90;
     padding: 10px 20px;
-    margin-right:10px;
+    margin-right: 10px;
     margin-top: 20px;
     color: white;
     padding-bottom: 0px;
 }
-#sign_up{
+
+#sign_up {
     padding: 10px 20px;
     margin-right: 10px;
     color: white;
 }
-#onlogin1{
+
+#onlogin1 {
     border-bottom: 5px solid #f90;
     padding: 10px 20px;
     margin-right: 10px;
     color: white;
 }
-#onlogin2{
+
+#onlogin2 {
     padding: 10px 20px;
     margin-right: 10px;
     color: white;
 }
-#onlogin2:hover{
+
+#onlogin2:hover {
     border-bottom: 2px solid #f90;
     padding: 10px 20px;
     margin-right: 10px;
@@ -187,11 +205,26 @@ body {
     border: white 1px solid;
     border-radius: 1px;
 }
-.input-data{
+
+.input-data {
     text-align: center;
     margin: 20px;
 }
+
 .Ez {
     background-color: black;
     color: white;
+}
+
+.footer {
+    bottom: 0;
+    position: fixed;
+    width: 100vw;
+    height: 40px;
+    background-color: #1b1b1b;
+}
+
+.footer>div {
+    text-align: right;
+    margin-right: 50px;
 }

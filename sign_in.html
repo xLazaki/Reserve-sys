@@ -10,33 +10,37 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Sign-in</title>
 </head>
+
 <body>
     <div class='container'>
         <div class='flex-container'>
             <div class='aleft'>
                 <div id='home' class='bar' onclick="window.location.href='login.html'"><img src='logo.png'></div>
                 <div id='reserve' class='bar'>Reserve</div>
-                <div id='about' class='bar'onclick="location.replace('about.html')">About</div>
+                <div id='about' class='bar' onclick="location.replace('about.html')">About</div>
                 <div id='my_booking' class='bar'>My Booking</div>
             </div>
             <div class='aright'>
                 <p id='login' onclick="location.replace('login.html');">LOGIN</p>
-                <p id='sign_up' onclick="location.replace('sign_in.html')"">SIGN-UP</p>
+                <p id='sign_up' onclick="location.replace('sign_in.html')" ">SIGN-UP</p>
             </div>
         </div>
         <form>
-            <div class="box">
+            <div class="box ">
                 <h1 id='head'><b>SIGN-UP</b></h1>
-                <input id='4' class='fa' type="text" placeholder="Name">
-                <input id='1' class='fa'type="email" placeholder="Username">
-                <input id='2' class='fa'type="password" placeholder="Password">
-                <input id='3' class='fa'type="password" placeholder="Comfirm Password">
-                <button id='sign_up_button' class='submit' onclick="sign_up_submit()">sign up</button>
+                <input id='4' class='fa' type="text " placeholder="Name ">
+                <input id='1' class='fa'type="email " placeholder="Username ">
+                <input id='2' class='fa'type="password " placeholder="Password ">
+                <input id='3' class='fa'type="password " placeholder="Comfirm Password ">
+                <button id='sign_up_button' class='submit' onclick="sign_up_submit() ">sign up</button>
             </div>
         </form>
     </div>
+    <div class='footer'>
+        <div>dsdsd</div>
+    </div>
 </body>
 <script>
-    document.getElementById("sign_up_button").addEventListener("click", function(event){ event.preventDefault()});
+    document.getElementById("sign_up_button ").addEventListener("click ", function(event){ event.preventDefault()});
 </script>
 </html>

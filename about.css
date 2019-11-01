@@ -8,6 +8,7 @@
     width: 100vw;
     justify-content: center;
 }
+
 .flex-container>div {
     display: flex;
     background-color: #1b1b1b;
@@ -16,52 +17,69 @@
     font-weight: bold;
     color: white;
 }
-.aleft{
+
+.aleft {
     width: 50vw;
     flex-direction: row;
 }
+
 .aright {
-    width:50vw;
+    width: 50vw;
     border: none;
     padding: 0px;
     justify-content: flex-end;
 }
+
 #reserve_button {
     border: none;
     background-color: #1b1b1b;
     color: white;
     font-weight: bold;
     font-family: "Ubuntu", Arial;
-    margin:20px
+    margin: 20px
 }
-#about{
+
+#about {
     margin: 20px;
 }
-#my_booking,#reserve {
+
+#my_booking,
+#reserve {
     padding: 0px;
     margin: 20px;
 }
-#reserve:hover,#my_booking:hover,#about:hover,#sign_up:hover,#login:hover{
+
+#reserve:hover,
+#my_booking:hover,
+#about:hover,
+#sign_up:hover,
+#login:hover {
     border-bottom: 2px solid #f90;
 }
+
 #home {
     margin: 0px;
 }
-#login{
+
+#login {
     padding: 10px 20px;
     margin: 5px;
     color: white;
 }
-#Dog{
+
+#Dog {
     margin-right: 10px;
 }
+
 img {
     height: 50px;
     width: auto;
 }
-body{
+
+body {
     background-color: black;
 }
+
 .box1 {
     display: flex;
     color: white;
@@ -69,6 +87,7 @@ body{
     align-items: center;
     width: 100vw;
 }
+
 #head {
     color: white;
     background-color: black;
@@ -77,7 +96,8 @@ body{
     padding: 20px 20px;
     font-size: 50px;
 }
-#infomation{
+
+#infomation {
     display: flex;
     background-color: #1b1b1b;
     width: 100vw;
@@ -85,8 +105,9 @@ body{
     justify-content: center;
     align-items: center;
 }
+
 .box2 {
-    background-color:black;
+    background-color: black;
     width: 40vw;
     height: 25vw;
     flex-direction: column;
@@ -94,8 +115,9 @@ body{
     justify-content: center;
     padding: 20px;
 }
+
 .item {
-    background: tomato;
+    background: #f90;
     padding: 5px;
     width: auto;
     height: auto;
@@ -105,36 +127,55 @@ body{
     font-weight: bold;
     font-size: 2em;
     text-align: center;
-  }
-#onlogin1{
+}
+
+#onlogin1 {
     border-bottom: 5px solid #f90;
     padding: 10px 20px;
     margin-right: 10px;
     color: white;
 }
-#onlogin2{
+
+#onlogin2 {
     padding: 10px 20px;
     margin-right: 10px;
     color: white;
 }
-#onlogin2:hover{
+
+#onlogin2:hover {
     border-bottom: 2px solid #f90;
     padding: 10px 20px;
     margin-right: 10px;
     color: white;
 }
-#sign_up{
+
+#sign_up {
     padding: 10px 20px;
     margin-right: 10px;
     color: white;
 }
-#login{
+
+#login {
     padding: 0px 20px;
-    margin-right:10px;
+    margin-right: 10px;
     margin-top: 30px;
     color: white;
     padding-bottom: 0px;
 }
-#about{
+
+#about {
     border-bottom: 5px solid #f90;
+}
+
+.footer {
+    bottom: 0;
+    position: fixed;
+    width: 100vw;
+    height: 40px;
+    background-color: black;
+}
+
+.footer>div {
+    text-align: right;
+    margin-right: 50px;
 }

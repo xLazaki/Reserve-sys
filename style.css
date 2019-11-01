@@ -33,60 +33,64 @@ img {
 }
 
 body {
-	width: 100%;
-	background-size: cover;
+    width: 100%;
+    background-size: cover;
     background-position: center;
     color: white;
 }
 
-td, th {
-  border: 1px solid #dddddd;
-  text-align: center;
-  padding: 8px;
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
 }
 
-h1, h5 {
+h1,
+h5 {
     font-family: "Ubuntu", Arial;
     color: white;
 }
 
 th {
-	border: 1px solid rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
 }
 
 tr:nth-child(odd) {
-  background-color: #f90;
-  color: black;
+    background-color: #f90;
+    color: black;
 }
 
 tr:nth-child(even) {
-	background-color: #1b1b1b;
+    background-color: #1b1b1b;
 }
 
-h1, h5 {
-	margin: 0px 25px;
+h1,
+h5 {
+    margin: 0px 25px;
 }
 
 p {
-	text-align: right;
-	margin: 0px 30px;
+    text-align: right;
+    margin: 0px 30px;
 }
 
 table {
-    text-align:center; 
-    margin-left:auto; 
-    margin-right:auto; 
-    width:85%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
     font-family: "Ubuntu", Arial;
     color: white;
- }
+}
 
- #reserve_button, #about.bar {
+#reserve_button,
+#about.bar {
     border: none;
     background-color: #1b1b1b;
     color: white;
     font-weight: bold;
-	font-family: "Ubuntu", Arial;
+    font-family: "Ubuntu", Arial;
     padding: 10px 20px;
     margin: 0px 0px;
 }
@@ -96,16 +100,31 @@ table {
 }
 
 #reserve {
-	border-bottom: 5px solid #f90;
+    border-bottom: 5px solid #f90;
     padding: 10px 20px;
     margin: 0px 15px;
 }
 
 #home {
-	padding: 10px 20px;
+    padding: 10px 20px;
 }
 
-#home:hover, #my_booking:hover, #about:hover, #sign-out:hover{
-	border-bottom: 2px solid  #f90; 
+#home:hover,
+#my_booking:hover,
+#about:hover,
+#sign-out:hover {
+    border-bottom: 2px solid #f90;
 }
 
+.footer {
+    bottom: 0;
+    position: fixed;
+    width: 100vw;
+    height: 40px;
+    background-color: #1b1b1b;
+}
+
+.footer>div {
+    text-align: right;
+    margin-right: 50px;
+}
