@@ -13,13 +13,15 @@ function getCookie(cname) {
     }
     return "";
 }
-function logout(){
+
+function logout() {
     deleteAllCookies()
     location.replace('login.html');
 }
+
 function deleteAllCookies() {
     var cookies = document.cookie.split(";");
-    
+
     for (var i = 0; i < cookies.length; i++) {
         var cookie = cookies[i];
         var eqPos = cookie.indexOf("=");
@@ -27,12 +29,28 @@ function deleteAllCookies() {
         document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
     }
 }
-if (getCookie('user')!=''){
-    var K=getCookie('user');
-    document.getElementById('sign_up').style='display:none;'
-    document.getElementById('login').style.display='none';
-    document.getElementById('onlogin1').innerHTML=K;
-}else{
-    document.getElementById('onlogin1').style.display='none';
-    document.getElementById('onlogin2').style.display='none';
+if (getCookie('user') != '') {
+    var K = getCookie('user');
+    document.getElementById('sign_up').style = 'display:none;'
+    document.getElementById('login').style.display = 'none';
+    document.getElementById('onlogin1').innerHTML = K;
+} else {
+    document.getElementById('onlogin1').style.display = 'none';
+    document.getElementById('onlogin2').style.display = 'none';
+}
+
+function pagereserve() {
+    if (getCookie('user') != '') {
+        location.replace("user_timeslot.html")
+    } else {
+        alert('Please login')
+    }
+}
+
+function pagebooking() {
+    if (getCookie('user') != '') {
+        location.replace("cancel_registeration.html")
+    } else {
+        alert('Please login')
+    }
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,16 +8,17 @@
     <link rel="stylesheet" href="about.css">
     <title>About</title>
 </head>
+
 <body>
     <div class='flex-container'>
         <div class='aleft'>
             <div id='home' class='bar' onclick="window.location.href='login.html'"><img src='logo.png'></div>
-            <div id='reserve' class='bar'>Reserve</div>
+            <div id='reserve' class='bar' onclick="pagereserve()">Reserve</div>
             <div id='about' class='bar' onclick="location.replace('about.html')">About</div>
-            <div id='my_booking' class='bar'>My Booking</div>
+            <div id='my_booking' onclick="pagebooking()" class='bar'>My Booking</div>
         </div>
         <div class='aright'>
-            <p id='login'onclick="location.replace('login.html')" >LOGIN</p>
+            <p id='login' onclick="location.replace('login.html')">LOGIN</p>
             <div id='onlogin1'></div>
             <p id='sign_up' onclick="location.replace('sign_in.html')">SIGN-UP</p>
             <div id='onlogin2' onclick="logout()">SIGN OUT</div>
@@ -35,4 +37,5 @@
     </div>
     <script type="text/javascript" src="about.js"></script>
 </body>
+
 </html>
